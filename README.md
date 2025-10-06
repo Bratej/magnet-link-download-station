@@ -63,3 +63,6 @@ A simple Chrome extension that catches magnet links from websites and sends them
 
 This project is released under the MIT License. Use it freely but at your own risk.
 
+## Credits
+Icons by Kemalmoe from Flaticon (https://www.flaticon.com/free-icons/magnet)
+
