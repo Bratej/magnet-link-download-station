@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.5;
+            padding: 15px;
+            width: 350px;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        label {
+            color: #555;
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 13px;
+            margin-bottom: 12px;
+            padding: 8px;
+            width: 100%;
+        }
+
+        input:focus {
+            border-color: #4caf50;
+            outline: none;
+            box-shadow: 0 0 3px #4caf50;
+        }
+
+        button {
+            background-color: #4caf50;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #status {
+            border-radius: 4px;
+            display: none;
+            font-size: 12px;
+            margin-top: 10px;
+            padding: 8px;
+        }
+
+        .success {
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            color: #155724;
+        }
+
+        .error {
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+        }
+
+        .info {
+            background-color: #f8f9fa;
+            border-left: 3px solid #4caf50;
+            color: #666;
+            font-size: 12px;
+            margin-top: 15px;
+            padding: 10px;
+        }
+
+        .visible {
+            display: block;
+        }
+    </style>
+    <title>Synology Download Station Settings</title>
+</head>
+<body>
+    <h1>Synology Download Station Settings</h1>
+
+    <form>
+        <label for="synologyUrl">Synology URL:</label>
+        <input type="url" id="synologyUrl" placeholder="https://your-synology:5001" required>
+
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" placeholder="password" required>
+
+        <button type="button" id="save">Save Settings</button>
+    </form>
+
+    <div id="status"></div>
+
+    <p class="info">
+        <b>Note:</b> Your credentials are stored locally and only used to communicate with your Synology NAS.
+        Enter the full URL including protocol (http:// or https://).
+        <br>
+        If you use https, make sure to accept the certificate warning or use a valid certificate.
+    </p>
+
+    <script src="settings.js"></script>
+</body>
+</html>
