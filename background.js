@@ -83,7 +83,7 @@ async function login(settings) {
 
 async function addTask(synologyUrl, sid, magnetUrl) {
     try {
-        const url = new URL('/webapi/DownloadStation/task.cgi', settings.synologyUrl);
+        const url = new URL('/webapi/DownloadStation/task.cgi', synologyUrl);
 
         url.search = new URLSearchParams({
             api: 'SYNO.DownloadStation.Task',
@@ -105,7 +105,7 @@ async function addTask(synologyUrl, sid, magnetUrl) {
 
 async function logout(synologyUrl, sid) {
     try {
-        const url = new URL('/webapi/auth.cgi', settings.synologyUrl);
+        const url = new URL('/webapi/auth.cgi', synologyUrl);
 
         url.search = new URLSearchParams({
             api: 'SYNO.API.Auth',
